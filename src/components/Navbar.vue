@@ -8,7 +8,6 @@
         >
         </v-img>
       </template>
-
       <v-toolbar-title class="text-uppercase white--text">
         <span class="font-weight-light">Yeso</span>
         <span>Dot</span>
