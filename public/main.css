@@ -1,8 +1,22 @@
-.class1 {
-    transform: scale(1.5);
+html {
+    overflow: hidden !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-  
-.class2 {
-    
+
+  html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
+
+.navbar {
+    transition: width 2s, height 4s;
+    background-color: rgba(247, 249, 249);
+    opacity: 0.9;
+}
+
+.navbar:hover {
+    height: 200px;
+}
+
 
