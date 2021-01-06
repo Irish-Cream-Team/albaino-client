@@ -8,14 +8,13 @@
         >
         </v-img>
       </template>
-      <v-toolbar-title class="text-uppercase white--text">
-        <span class="font-weight-light">Yeso</span>
-        <span>Dot</span>
+      <v-toolbar-title class="white--text">
+        <span>Hello Shavit, from team Devops, welcome back</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items>
+      <v-toolbar-items id="toolbarButtons">
         <v-btn depressed icon tile large color="white" class="px-10"
           ><v-icon>mdi-home</v-icon></v-btn
         >
@@ -31,6 +30,11 @@
       </v-toolbar-items>
 
       <v-spacer></v-spacer>
+
+      <v-toolbar-title class="text-uppercase white--text">
+        <span class="font-weight-light">Yeso</span>
+        <span>Dot</span>
+      </v-toolbar-title>
     </v-toolbar>
   </nav>
 </template>
@@ -44,3 +48,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#toolbarButtons {
+  margin-right: 18%;
+}
+</style>
