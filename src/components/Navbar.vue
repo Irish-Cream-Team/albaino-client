@@ -51,6 +51,6 @@ export default {
 
 <style scoped>
 #toolbarButtons {
-  margin-right: 18%;
+  margin-right: 17.5%;
 }
 </style>

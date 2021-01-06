@@ -8,18 +8,32 @@
       max-width="400"
     >
       <v-img gradient="to top right, rgba(55,236,186,1), rgba(25,32,72,.7)">
-        <v-card-title class="justify-center">
-          <span class="headline font-weight-medium">My Projects</span>
+        <v-card-title class="justify-space-between">
+          <span id="myProjectsHeadline" class="headline font-weight-medium"
+            >My Projects</span
+          >
+          <v-btn depressed icon tile large color="white"
+            ><v-icon>mdi-plus</v-icon></v-btn
+          >
         </v-card-title>
+
+        <v-card-title
+          id="projectsWindowHeadlines"
+          class="justify-space-between"
+        >
+          <span class="headline font-weight-small">Name</span>
+          <span class="headline font-weight-small">Version</span>
+        </v-card-title>
+
         <div id="textOutline" class="d-flex flex-column align-start">
           <v-btn
-            text
+            text  
             x-large
             class="text-capitalize headline d-flex justify-space-between font-weight-bold"
             min-width="100%"
           >
             Aman Board
-            <div>Version 1</div></v-btn
+            <div>1</div></v-btn
           >
           <v-btn
             text
@@ -28,7 +42,7 @@
             min-width="100%"
           >
             Aman Board
-            <div>Version 3.2</div></v-btn
+            <div>3.2</div></v-btn
           >
           <v-btn
             text
@@ -37,7 +51,7 @@
             min-width="100%"
           >
             Aman Board
-            <div>Version 1.2</div></v-btn
+            <div>1.2</div></v-btn
           >
           <v-btn
             text
@@ -46,7 +60,7 @@
             min-width="100%"
           >
             Aman Board
-            <div>Version 2</div></v-btn
+            <div>2</div></v-btn
           >
         </div>
       </v-img>
@@ -70,5 +84,13 @@ export default {
 }
 #textOutline {
   -webkit-text-stroke: 0.4px black;
+}
+#projectsWindowHeadlines {
+  margin-left: 3%;
+  margin-right: 2.5%;
+}
+#myProjectsHeadline {
+  margin-left: auto;
+  margin-right: 23%;
 }
 </style>
