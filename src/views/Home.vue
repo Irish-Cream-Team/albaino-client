@@ -12,7 +12,7 @@
           <span id="myProjectsHeadline" class="headline font-weight-medium"
             >My Projects</span
           >
-          <v-btn depressed icon tile large color="white"
+          <v-btn depressed icon tile large color="white" @click="counter"
             ><v-icon>mdi-plus</v-icon></v-btn
           >
         </v-card-title>
@@ -27,7 +27,7 @@
 
         <div id="textOutline" class="d-flex flex-column align-start">
           <v-btn
-            text  
+            text
             x-large
             class="text-capitalize headline d-flex justify-space-between font-weight-bold"
             min-width="100%"
@@ -69,11 +69,16 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {
       hover: false,
     };
+  },
+  computed: {
+    ...mapGetters(["counter"]),
   },
 };
 </script>

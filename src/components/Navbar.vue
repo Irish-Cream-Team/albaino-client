@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <v-toolbar app class="toolbar" color="#43a047">
+    <v-app-bar app class="toolbar" color="#43a047">
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
@@ -9,12 +9,12 @@
         </v-img>
       </template>
       <v-toolbar-title class="white--text">
-        <span>Hello Shavit, from team Devops, welcome back</span>
+        <span>Hello Shavit</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items id="toolbarButtons">
+      <v-toolbar-items>
         <v-btn depressed icon tile large color="white" class="px-10"
           ><v-icon>mdi-home</v-icon></v-btn
         >
@@ -35,7 +35,7 @@
         <span class="font-weight-light">Yeso</span>
         <span>Dot</span>
       </v-toolbar-title>
-    </v-toolbar>
+    </v-app-bar>
   </nav>
 </template>
 
@@ -50,7 +50,4 @@ export default {
 </script>
 
 <style scoped>
-#toolbarButtons {
-  margin-right: 17.5%;
-}
 </style>
