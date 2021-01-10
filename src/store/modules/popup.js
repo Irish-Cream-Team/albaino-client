@@ -1,16 +1,20 @@
 const state = {
-  counter: 5,
+  counter: 0,
 };
 
 const getters = {
-  counter(state) {
-    return state.counter;
+  counter: state => state.counter
+};
+
+const actions = {
+  increment(context) {
+    context.commit("increment");
   },
 };
 
-const actions = {};
-
-const mutations = {};
+const mutations = {
+  increment: state => state.counter++,
+};
 
 export default {
   state,

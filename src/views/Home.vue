@@ -7,12 +7,13 @@
       dark
       max-width="400"
     >
+      <div>{{ counter }}</div>
       <v-img gradient="to top right, rgba(55,236,186,1), rgba(25,32,72,.7)">
         <v-card-title class="justify-space-between">
           <span id="myProjectsHeadline" class="headline font-weight-medium"
             >My Projects</span
           >
-          <v-btn depressed icon tile large color="white" @click="counter"
+          <v-btn depressed icon tile large color="white" @click="increment"
             ><v-icon>mdi-plus</v-icon></v-btn
           >
         </v-card-title>
@@ -69,7 +70,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   data() {
@@ -79,6 +80,11 @@ export default {
   },
   computed: {
     ...mapGetters(["counter"]),
+  },
+  methods: {
+    ...mapActions([
+      "increment", 
+    ]),
   },
 };
 </script>
