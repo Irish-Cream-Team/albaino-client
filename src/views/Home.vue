@@ -7,13 +7,13 @@
       dark
       max-width="400"
     >
-      <div>{{ counter }}</div>
+      <!-- <div>{{ counter }}</div> -->
       <v-img gradient="to top right, rgba(55,236,186,1), rgba(25,32,72,.7)">
         <v-card-title class="justify-space-between">
           <span id="myProjectsHeadline" class="headline font-weight-medium"
             >My Projects</span
           >
-          <v-btn depressed icon tile large color="white" @click="increment"
+          <v-btn depressed icon tile large color="white" @click="openModal"
             ><v-icon>mdi-plus</v-icon></v-btn
           >
         </v-card-title>
@@ -66,25 +66,22 @@
         </div>
       </v-img>
     </v-card>
+    <newProjectPopup ref="modal"></newProjectPopup>
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import newProjectPopup from "../components/newProjectPopup.vue";
 
 export default {
+  components: { newProjectPopup },
   data() {
-    return {
-      hover: false,
-    };
-  },
-  computed: {
-    ...mapGetters(["counter"]),
+    return {};
   },
   methods: {
-    ...mapActions([
-      "increment", 
-    ]),
+    openModal() {
+      this.$refs.modal.showModal();
+    },
   },
 };
 </script>
