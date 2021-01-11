@@ -1,7 +1,6 @@
 <template>
-  <v-dialog v-model="dialog">
-    <v-row justify="center">
-      <v-col cols="12" sm="10" md="8" lg="6">
+  <v-dialog v-model="dialog" width="40%">
+      <v-col >
         <v-card ref="form">
           <v-card-text>
             <v-text-field
@@ -9,6 +8,13 @@
               v-model="projectName"
               :rules="[() => !!name || 'This field is required']"
               label="Project Name"
+              required
+            ></v-text-field>
+            <v-text-field
+              ref="Version"
+              v-model="Version"
+              :rules="[() => !!name || 'This field is required']"
+              label="Version"
               required
             ></v-text-field>
             <v-autocomplete
@@ -28,7 +34,6 @@
               required
             ></v-text-field>
           </v-card-text>
-          <v-divider class="mt-12"></v-divider>
           <v-card-actions>
             <v-btn text> Cancel </v-btn>
             <v-spacer></v-spacer>
@@ -52,7 +57,6 @@
           </v-card-actions>
         </v-card>
       </v-col>
-    </v-row>
   </v-dialog>
 </template>
 

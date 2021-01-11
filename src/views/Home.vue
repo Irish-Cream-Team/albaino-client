@@ -66,7 +66,9 @@
         </div>
       </v-img>
     </v-card>
-    <newProjectPopup ref="modal"></newProjectPopup>
+    <div class="text-center">
+      <newProjectPopup ref="modal"></newProjectPopup>
+    </div>
   </div>
 </template>
 
