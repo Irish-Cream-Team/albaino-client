@@ -1,7 +1,6 @@
 <template>
-  <v-dialog v-model="dialog" width="40%">
-      <v-col >
-        <v-card ref="form">
+  <v-dialog v-model="dialog" width="40%" >
+        <v-card ref="form" class="pt-4">
           <v-card-text>
             <v-text-field
               ref="projectName"
@@ -56,7 +55,6 @@
             <v-btn color="primary" text @click="submit"> Submit </v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>
   </v-dialog>
 </template>
 
